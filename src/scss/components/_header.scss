@@ -1,0 +1,54 @@
+@use "../utils/functions/" as *;
+@use "../utils/mixins/" as *;
+
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  padding: 20px 0;
+  width: 100%;
+  transition-property: transform;
+  transition-duration: 0.15s;
+
+  &__inner {
+    z-index: -1;
+    flex-direction: column;
+    margin-right: 0;
+    transition-duration: 0.15s;
+  }
+
+  &.hide {
+    transform: translateY(-100%);
+  }
+
+  @include media(tablet) {
+    .nav__inner {
+      position: fixed;
+      left: 0;
+      top: 0;
+      z-index: -1;
+      flex-direction: column;
+      justify-content: flex-start;
+      overflow-y: auto;
+      padding-top: calc(var(--header-height) * 1.5);
+      width: 100%;
+      height: calc(var(--vh));
+      background-color: var(--color-white);
+      transform: translateX(150%);
+      transition-property: transform;
+      transition-duration: 0.4s;
+    }
+
+    .nav__list {
+      z-index: -1;
+      flex-direction: column;
+      margin-right: 0;
+    }
+
+    .nav__item {
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+    }
+  }
+}

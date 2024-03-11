@@ -1,0 +1,114 @@
+@use "../utils/functions/" as *;
+@use "../utils/mixins/" as *;
+
+.about {
+  $root: &;
+
+  &--main {
+    #{$root}__content {
+      border-radius: var(--radius-big) 0 0 var(--radius-big);
+
+      p {
+        margin: 0;
+      }
+
+      @include media(mobile-l) {
+        border-radius: var(--radius-big);
+      }
+    }
+
+    #{$root}__image {
+      border-radius: 0 var(--radius-big) var(--radius-big) 0;
+
+      @include media(mobile-l) {
+        border-radius: var(--radius-big);
+      }
+    }
+
+    #{$root}__inner {
+      @include media(mobile-l) {
+        flex-direction: column-reverse;
+        gap: 24px;
+      }
+    }
+  }
+
+  &--menu {
+    #{$root}__content {
+      display: flex;
+      gap: 36px;
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+
+  &__inner {
+    display: flex;
+
+    @include media(mobile-l) {
+      flex-direction: column;
+      gap: 24px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 493px;
+    border-radius: 0 var(--radius-big) var(--radius-big) 0;
+    padding: clamp(16px, vw(48), 48px) clamp(16px, vw(48), 48px) clamp(16px, vw(48), 48px) clamp(16px, vw(57), 57px);
+    background-color: var(--color-white);
+    box-shadow: var(--shadow);
+
+    @include media(mobile-l) {
+      max-width: 100%;
+      border-radius: var(--radius-big);
+    }
+  }
+  &__descr {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  &__image {
+    overflow: hidden;
+    border-radius: var(--radius-big) 0 0 var(--radius-big);
+    box-shadow: var(--shadow);
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    @include media(mobile-l) {
+      border-radius: var(--radius-big);
+
+      img {
+        aspect-ratio: 16/9;
+      }
+    }
+  }
+
+  @include media(mobile-l) {
+    br {
+      display: none;
+    }
+  }
+
+  h3 {
+    margin-bottom: 32px;
+  }
+
+  p {
+    margin-bottom: 32px;
+  }
+
+  .btn {
+    align-self: flex-end;
+  }
+}

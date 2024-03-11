@@ -1,0 +1,47 @@
+/* stylelint-disable alpha-value-notation */
+/* stylelint-disable color-function-notation */
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+
+:root {
+  --content-width: 1320px;
+  --container-offset: 16px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // font-family
+  --font-family-primary: "Space Grotesk", sans-serif;
+
+  // font-weight
+  --fw-300: 300;
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
+  --fw-800: 800;
+
+  // color
+  --color-dark-900: #2c2e35;
+  --color-white: #fff;
+  --color-pink-100: #fff3f9;
+  --color-blue-800: #73729a;
+  //  radius
+  --radius-main: 8px;
+  --gradient: linear-gradient(
+    270deg,
+    rgba(241, 241, 241, 0),
+    rgb(241, 241, 241) 49.746%,
+    rgb(241, 241, 241) 49.896%,
+    rgb(241, 241, 241) 100%
+  );
+
+  --gradient-second: linear-gradient(
+    270deg,
+    rgba(241, 241, 241, 0),
+    rgba(241, 241, 241, 0.8),
+    rgb(241, 241, 241) 0.01%,
+    rgb(241, 241, 241) 100%
+  );
+
+  --gradient-violet: linear-gradient(180deg, #c9ada7 0%, #442c13 100%);
+
+  --shadow: 0 0 50px 0 rgba(201, 173, 167, 0.7);
+}

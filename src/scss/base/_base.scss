@@ -1,0 +1,103 @@
+@use "../utils/functions/" as *;
+@use "../utils/mixins" as *;
+
+html,
+body {
+  scroll-behavior: smooth;
+  overscroll-behavior-y: none;
+  scroll-padding: cacl(var(--header-height) + 15px);
+}
+
+.page {
+  --radius-big: 32px;
+
+  height: var(--vh);
+  font-family: var(--font-family-primary);
+  font-weight: var(--fw-300);
+  font-style: normal;
+  font-size: clamp(16px, 0.9167rem + 0.3704vi, 20px);
+  line-height: 1.6;
+  letter-spacing: 0;
+  color: var(--color-black);
+  background-color: var(--color-gray-100);
+  font-optical-sizing: auto;
+
+  &__body {
+    min-width: 320px;
+    min-height: var(--vh);
+  }
+
+  &.open {
+    overflow: hidden;
+  }
+
+  @include media(mobile-l) {
+    --radius-big: 16px;
+  }
+}
+
+.section {
+  margin-bottom: clamp(32px, vw(64), 64px);
+}
+
+.container,
+.wrapper {
+  margin: 0 auto;
+  padding: 0 var(--container-offset);
+  width: 100%;
+  max-width: var(--container-width);
+}
+
+.wrapper {
+  max-width: 1042px;
+}
+
+.site-container {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr auto;
+  min-height: var(--vh);
+}
+
+.main {
+  padding-top: var(--header-height);
+}
+
+.background {
+  // padding: clamp(16px, vw(64), 64px) 0;
+  padding: 3.2rem 0;
+}
+
+.logo {
+  width: 100%;
+  max-width: 233px;
+
+  @include media(mobile-m) {
+    max-width: 200px;
+  }
+}
+
+.is-scrolling {
+  overflow-y: scroll;
+  padding-bottom: 20px;
+  scroll-snap-align: start;
+  scrollbar-color: var(--color-orange-600) var(--color-white);
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background-color: var(--color-silver-white);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background-color: var(--color-orange-600);
+  }
+}

@@ -1,0 +1,67 @@
+@use "../utils/functions/" as *;
+@use "../utils/mixins/" as *;
+
+.faq {
+  &__item {
+    border: 2px solid var(--color-violet-50);
+    border-radius: (var(--radius-big));
+    background-color: var(--color-white);
+
+    &:not(:last-child) {
+      margin-bottom: 28px;
+    }
+  }
+
+  details {
+    overflow: hidden;
+    border-radius: (var(--radius-big));
+
+    p {
+      font-size: 18px;
+      letter-spacing: 0.02em;
+    }
+
+    &[open] {
+      summary {
+        &::after {
+          background-color: var(--color-violet-50);
+          transform: scaleY(-1);
+        }
+      }
+    }
+  }
+
+  summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px clamp(16px, vw(32), 32px);
+    font-weight: var(--fw-800);
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: var(--color-black);
+    cursor: pointer;
+    gap: 16px;
+
+    &::after {
+      @include mask;
+
+      position: relative;
+      display: block;
+      mask-image: url("../images/icons/arrow-down.svg");
+      min-width: 32px;
+      min-height: 32px;
+      background-color: var(--color-violet-400);
+      transition: transform 0.3s linear;
+    }
+
+    + div {
+      padding: 0 30px 5px;
+    }
+  }
+
+  h2 {
+    font-size: clamp(18px, 0.9167rem + 1.4815vi, 36px);
+  }
+}
