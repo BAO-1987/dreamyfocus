@@ -17,16 +17,12 @@
   &__list {
     display: flex;
     align-items: center;
-    margin-right: clamp(16px, vw(48), 48px);
-
-    @include media(tablet) {
-      margin-right: 0;
-    }
+    margin-right: auto;
   }
 
   &__item {
     &:not(:last-of-type) {
-      margin-right: clamp(10px, vw(33), 33px);
+      margin-right: 32px;
     }
 
     @include media(tablet) {
@@ -35,21 +31,21 @@
   }
 
   &__link {
-    font-size: 18px;
-    line-height: 1.16;
+    font-size: 16px;
+    line-height: 1.25;
     transition: color 0.3s linear;
 
     &:hover {
-      color: var(--color-orange-600);
+      color: var(--color-blue-800);
     }
 
     &.true {
-      color: var(--color-orange-600);
+      color: var(--color-blue-800);
     }
   }
 
   &__btns {
     display: flex;
-    gap: 16px;
+    gap: 24px;
   }
 }

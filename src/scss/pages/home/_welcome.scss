@@ -1,0 +1,17 @@
+@use "../../utils/functions/" as *;
+@use "../../utils/mixins/" as *;
+
+.welcome {
+  width: 100%;
+  max-width: 860px;
+  text-align: center;
+  margin-inline: auto;
+
+  &__content {
+    margin-bottom: 24px;
+  }
+
+  .btn {
+    margin: 0 auto;
+  }
+}

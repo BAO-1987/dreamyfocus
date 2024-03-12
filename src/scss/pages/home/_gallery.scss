@@ -1,0 +1,9 @@
+@use "../../utils/functions/" as *;
+@use "../../utils/mixins/" as *;
+
+.gallery {
+  min-height: 820px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}

@@ -1,0 +1,19 @@
+@use "../../utils/functions/" as *;
+@use "../../utils/mixins/" as *;
+
+.projects {
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 42px;
+  }
+
+  &__content {
+    width: 100%;
+    max-width: 452px;
+
+    .sub-text {
+      font-weight: var(--fw-300);
+    }
+  }
+}
