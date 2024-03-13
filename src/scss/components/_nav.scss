@@ -2,6 +2,8 @@
 @use "../utils/mixins/" as *;
 
 .nav {
+  $root: &;
+
   position: relative;
   display: flex;
   align-items: center;
@@ -47,5 +49,30 @@
   &__btns {
     display: flex;
     gap: 24px;
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+
+    a {
+      font-size: 16px;
+    }
+  }
+
+  &--footer {
+    #{$root}__list {
+      margin-right: 0;
+      display: block;
+      columns: 2;
+      gap: 85px;
+    }
+
+    #{$root}__item {
+      &:not(:last-of-type) {
+        margin: 0 0 24px 0;
+      }
+    }
   }
 }
