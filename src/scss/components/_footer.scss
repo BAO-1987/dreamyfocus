@@ -2,12 +2,13 @@
 @use "../utils/mixins/" as *;
 
 .footer {
-  padding: 48px 0 60px;
+  &__inner {
+    padding: 43px 0;
+  }
 
   &__top {
     position: relative;
     padding-bottom: 38px;
-
 
     &::before {
       content: "";
@@ -23,9 +24,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 25px 0;
+    padding-top: 25px;
     font-size: 16px;
-  
 
     @include media(mobile-m) {
       flex-direction: column;
@@ -40,7 +40,6 @@
   &__item {
     &:not(:last-child) {
       margin-right: 49px;
-    
 
       @include media(mobile-m) {
         margin: 0 0 16px;
@@ -53,39 +52,6 @@
 
     &:hover {
       color: var(--color-blue-400);
-    }
-  }
-
-  .nav__inner,
-  .nav--footer {
-    @include media(tablet) {
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-    }
-  }
-
-  .nav__list {
-    @include media(mobile-sm) {
-      flex-direction: column;
-    }
-  }
-
-  .nav__link {
-    @include media(mobile-m) {
-      font-size: 16px;
-    }
-  }
-
-  .nav__btns {
-    @include media(tablet) {
-      flex-direction: row;
-    }
-  }
-
-  .logo {
-    @include media(tablet) {
-      margin-bottom: 20px;
     }
   }
 }

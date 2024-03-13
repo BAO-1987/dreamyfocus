@@ -11,6 +11,7 @@
   padding: 8px 22px;
   width: 100%;
   max-width: fit-content;
+  height: max-content;
   font-weight: var(--fw-700);
   font-size: 16px;
   line-height: 1.25;
@@ -45,9 +46,12 @@
 
     &:hover,
     &:focus {
-      border-color: var(--color-pink-100);
       color: var(--color-pink-100);
       background-color: var(--color-blue-800);
     }
+  }
+
+  &--big {
+    max-width: 190px;
   }
 }

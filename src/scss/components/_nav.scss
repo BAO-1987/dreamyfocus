@@ -54,7 +54,7 @@
   &__block {
     display: flex;
     flex-direction: column;
-    gap: 72px;
+    gap: 3.4rem;
 
     a {
       font-size: 16px;
@@ -66,12 +66,12 @@
       margin-right: 0;
       display: block;
       columns: 2;
-      gap: 85px;
+      gap: 80px;
     }
 
     #{$root}__item {
       &:not(:last-of-type) {
-        margin: 0 0 24px 0;
+        margin: 0 0 25px 0;
       }
     }
   }
