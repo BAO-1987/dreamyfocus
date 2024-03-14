@@ -4,7 +4,7 @@
 .team {
   &__list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 24px;
 
     @include media(tablet) {
@@ -17,55 +17,62 @@
   }
 
   &__item {
-    display: flex;
-    flex-direction: column;
-    border-radius: var(--radius-big);
-    padding: clamp(16px, vw(41), 41px);
-    box-shadow: var(--shadow);
-    background-color: var(--color-white);
+    position: relative;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      background: rgba(255, 243, 249, 0.24);
+      opacity: 0;
+      transition: opacity 0.4s linear;
+      inset: 0;
+    }
 
     img {
+      position: relative;
       overflow: hidden;
-      margin-bottom: 32px;
-      border-radius: 24px;
+      border-radius: var(--radius-main);
       width: 100%;
-      min-height: 267px;
+      transition: backdrop-filter 0.4s linear;
     }
 
-    h3 {
-      margin-bottom: 8px;
-      font-size: 20px;
-      line-height: 1.5;
-      color: var(--color-orange-600);
-    }
-
-    p {
-      line-height: 1.5;
-    }
-
-    &:last-child {
-      @include media(tablet) {
-        grid-column: 2 span;
-        max-width: 100%;
-
-        img {
-          margin: 0 auto 32px;
-          max-width: 300px;
-        }
+    &:hover {
+      &::before {
+        opacity: 1;
       }
 
-      @include media(mobile-m) {
-        grid-column: auto;
+      img {
+        backdrop-filter: blur(4px);
+      }
 
-        img {
-          margin: 0 auto 32px;
-          max-width: 100%;
-        }
+      .team__descr {
+        opacity: 1;
       }
     }
   }
 
-  h2 {
-    font-size: clamp(18px, 0.9167rem + 1.4815vi, 36px);
+  &__descr {
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    border-radius: var(--radius-main);
+    padding: 24px;
+    font-size: 16px;
+    color: var(--color-white);
+    background-color: var(--color-blue-800);
+    opacity: 0;
+    transition: opacity 0.4s linear;
+
+    span {
+      display: block;
+      margin-bottom: 15px;
+      font-weight: var(--fw-700);
+    }
+
+    p {
+      font-weight: var(--fw-400);
+    }
   }
 }

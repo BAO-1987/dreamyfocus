@@ -1,0 +1,22 @@
+@use "../../utils/functions/" as *;
+@use "../../utils/mixins/" as *;
+
+.introduction {
+  &__content {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, auto);
+    gap: 2.4rem;
+
+    img {
+      overflow: hidden;
+      border-radius: var(--br-main);
+    }
+  }
+
+  .sub-text {
+    width: 100%;
+    max-width: 688px;
+    line-height: 1.5;
+  }
+}

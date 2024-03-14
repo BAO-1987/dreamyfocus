@@ -1,0 +1,31 @@
+@use "../../utils/functions/" as *;
+@use "../../utils/mixins/" as *;
+
+.advantages {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  li {
+    width: 100%;
+    max-width: 418px;
+    font-size: clamp(16px, 0.8571rem + 0.7143vi, 24px);
+    text-align: center;
+
+    &:not(:last-of-type) {
+      position: relative;
+      margin-right: 1.6rem;
+
+      &::before {
+        content: "";
+        position: absolute;
+        right: 16px;
+        width: 1px;
+        height: 100%;
+        background: rgba(44, 46, 53, 0.12);
+      }
+    }
+
+  }
+}

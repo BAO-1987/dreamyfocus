@@ -2,40 +2,46 @@
 @use "../../utils/mixins/" as *;
 
 .approach {
-  &__inner {
+  $root: &;
+
+  &__list {
+    counter-reset: advantages-counter;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 20px;
+  }
 
-    @include media(mobile-l) {
-      flex-direction: column-reverse;
-      align-items: center;
-      justify-content: center;
-      gap: 20px;
+  li {
+    counter-increment: advantages-counter;
+    position: relative;
+    border-bottom: 1px solid rgba(44, 46, 53, 0.12);
+
+    &::before {
+      content: counter(advantages-counter, decimal-leading-zero);
+      position: absolute;
+      right: 0;
+      bottom: 27px;
+      font-size: clamp(32px, 1.5rem + 1.6667vi, 48px);
+      line-height: 0.58;
+      color: var(--color-blue-800);
+    }
+
+    h3 {
+      margin-bottom: 8px;
+      font-weight: var(--fw-500);
+      font-size: 24px;
+    }
+
+    p {
+      margin-bottom: 12px;
+      font-weight: var(--fw-300);
+      font-size: 14px;
     }
   }
 
-  &__box {
-    padding: 32px 0;
-    width: 100%;
-    max-width: 390px;
-
-    h2 {
-      margin-bottom: 32px;
-      font-size: clamp(18px, 0.9167rem + 1.4815vi, 36px);
-    }
-
-    @include media(mobile-l) {
-      margin: 0 auto;
-      padding: 0;
-      max-width: 100%;
-    }
-  }
-
-  &__image {
-    @include media(mobile-l) {
-      img {
-        width: 100%;
-      }
+  @include media(tablet) {
+    br {
+      display: none;
     }
   }
 }

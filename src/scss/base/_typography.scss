@@ -5,7 +5,7 @@ h1,
 h2,
 h3 {
   overflow: hidden;
-  margin-bottom: 24px;
+  margin-bottom: 1.8rem;
   // width: fit-content;
   font-weight: var(--fw-700);
   font-size: clamp(32px, 1.5rem + 1.6667vi, 48px);
@@ -13,7 +13,7 @@ h3 {
 }
 
 h2 {
-  margin-bottom: clamp(30px, vw(64), 64px);
+  margin-bottom: 2.4rem;
   font-size: clamp(25px, 1.3333rem + 1.0185vi, 36px);
   line-height: 1.3;
 }
