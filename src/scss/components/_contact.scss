@@ -64,8 +64,12 @@
       height: 42px;
       font-size: 14px;
       line-height: 1.2;
-      color: rgba(255, 243, 249, 0.36);
-      background-color: inherit;
+      color: var(--color-white);
+      background-color: var(--color-blue-800);
+
+      &::placeholder {
+        color: rgba(255, 243, 249, 0.36);
+      }
     }
 
     textarea {

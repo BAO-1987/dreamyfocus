@@ -1,0 +1,51 @@
+@use "../../utils/functions/" as *;
+@use "../../utils/mixins/" as *;
+
+.booking {
+  &__list {
+    display: grid;
+    counter-reset: advantages-counter;
+    gap: 2.4rem;
+  }
+
+  &__item {
+    counter-increment: booking-counter;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2.4rem;
+
+    img {
+      border-radius: var(--radius-main);
+    }
+  }
+
+  &__descr {
+    &::before {
+      content: counter(booking-counter);
+      position: relative;
+      left: 0;
+      display: block;
+      font-weight: 300;
+      font-size: clamp(32px, 1.5rem + 1.6667vi, 48px);
+      line-height: 1.27;
+      color: var(--color-blue-800);
+      margin-bottom: 25px;
+    }
+
+    h3 {
+      font-size: 24px;
+      line-height: 1;
+      margin-bottom: 24px;
+    }
+
+    p {
+      font-weight: 300;
+      font-size: 14px;
+
+      &:first-of-type {
+        margin-bottom: 21px;
+      }
+    }
+  }
+}
