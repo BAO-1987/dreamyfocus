@@ -1,0 +1,9 @@
+@use "../../utils/functions/" as *;
+@use "../../utils/mixins/" as *;
+
+.collage {
+  padding: 10.4rem 0 8.2rem;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
