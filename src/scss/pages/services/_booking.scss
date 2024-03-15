@@ -3,9 +3,13 @@
 
 .booking {
   &__list {
-    counter-reset: advantages-counter;
+    counter-reset: booking-counter;
     display: grid;
     gap: 2.4rem;
+
+    @include media(tablet) {
+      gap: 24px;
+    }
   }
 
   &__item {
@@ -17,6 +21,21 @@
 
     img {
       border-radius: var(--radius-main);
+      height: 100%;
+    }
+
+    @include media(tablet) {
+      gap: 24px;
+    }
+
+    @include media(mobile-m) {
+      grid-template-columns: 1fr;
+
+      &:nth-child(odd) {
+        img {
+          order: 1;
+        }
+      }
     }
   }
 
@@ -35,7 +54,7 @@
 
     h3 {
       margin-bottom: 24px;
-      font-size: 24px;
+      font-size: clamp(18px, 0.9946rem + 0.6522vi, 24px);
       line-height: 1;
     }
 

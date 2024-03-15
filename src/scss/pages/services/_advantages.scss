@@ -2,17 +2,20 @@
 @use "../../utils/mixins/" as *;
 
 .advantages {
-   padding: 106px 0;
+  padding: 5.3rem 0;
 
   &__list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
     align-items: center;
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+
+    @include media(mobile-l) {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   li {
- 
     font-size: clamp(16px, 0.8571rem + 0.7143vi, 24px);
     text-align: center;
 
@@ -22,13 +25,31 @@
       &::before {
         content: "";
         position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
         right: -15px;
+        top: 50%;
         width: 1px;
         height: 230px;
         background: rgba(44, 46, 53, 0.12);
+        transform: translateY(-50%);
+
+        @include media(tablet) {
+          height: 100%;
+        }
       }
+    }
+
+    @include media(mobile-l) {
+      &:last-child {
+        grid-column: 2 span;
+      }
+    }
+  }
+
+  @include media(tablet) {
+    padding: 2.5rem 0;
+
+    br {
+      display: none;
     }
   }
 }

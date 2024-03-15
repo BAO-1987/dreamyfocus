@@ -25,9 +25,11 @@
       margin: auto;
     }
 
-    @include media(tablet-wide) {
+     @include media(tablet) {
       margin: 0;
     }
+
+
   }
 
   &__item {

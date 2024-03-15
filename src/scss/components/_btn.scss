@@ -27,17 +27,18 @@
     background-color: var(--color-pink-100);
   }
 
-  // &.formsapp-button {
-  //   font-family: var(--font-family-primary);
-  //   margin: 0;
-  //   background-color: var(--color-pink-100) !important;
+  &.formsapp-button {
+    font-family: var(--font-family-primary);
+    margin: 0;
+    background-color: var(--color-blue-800) !important;
 
-  //   &:hover,
-  //   &:focus {
-  //     color: var(--color-blue-800);
-  //     background-color: var(--color-pink-100);
-  //   }
-  // }
+    &:hover,
+    &:focus {
+      border-color: var(--color-blue-800) !important;
+      color: var(--color-blue-800) !important;
+      background-color: var(--color-pink-100) !important;
+    }
+  }
 
   &--reverse {
     border-color: var(--color-blue-800);

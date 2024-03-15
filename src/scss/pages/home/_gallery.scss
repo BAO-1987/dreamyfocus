@@ -4,10 +4,15 @@
 .gallery {
   min-height: 820px;
   background-position: top;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
 
   @include media(tablet-wide) {
     min-height: 400px;
+    background-size: cover;
+  }
+
+  @include media(mobile-m) {
+    min-height: 250px;
   }
 }

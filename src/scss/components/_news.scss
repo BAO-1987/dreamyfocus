@@ -2,6 +2,10 @@
 @use "../utils/mixins" as *;
 
 .news {
+  &--main {
+    padding-top: 2.4rem;
+  }
+
   &__list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -55,6 +59,12 @@
 
   .btn {
     margin: 0 auto;
+  }
+
+  h1 {
+    text-align: center;
+    text-transform: capitalize;
+    margin-inline: auto;
   }
 
   h2 {

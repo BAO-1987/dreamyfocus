@@ -10,7 +10,25 @@
     gap: 2.4rem;
 
     h2 {
+      position: relative;
       margin-bottom: 16px;
+    }
+
+    @include media(tablet) {
+      gap: 5px;
+
+      img {
+        width: 45px;
+        height: 45px;
+      }
+    }
+
+    @include media(mobile-m) {
+      img {
+        position: absolute;
+        right: 16px;
+        transform: translateY(-65px);
+      }
     }
   }
 

@@ -7,10 +7,6 @@
   text-align: center;
   margin-inline: auto;
 
-  &__content {
-    margin-bottom: 24px;
-  }
-
   .btn {
     margin: 0 auto;
   }
@@ -18,5 +14,9 @@
   .sub-text {
     margin-bottom: 24px;
     font-weight: var(--fw-500);
+  }
+
+  h1 {
+    margin-bottom: 24px;
   }
 }

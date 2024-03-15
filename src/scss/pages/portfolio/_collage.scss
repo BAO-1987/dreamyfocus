@@ -6,4 +6,8 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+
+  @include media(tablet) {
+    padding: 4rem;
+  }
 }

@@ -10,10 +10,12 @@
 
     img {
       overflow: hidden;
-      border-radius: var(--br-main);
+      border-radius: var(--radius-main);
       height: 100%;
 
       @include media(mobile-l) {
+        object-position: center;
+        aspect-ratio: 13 / 9;
         margin-inline: auto;
       }
     }

@@ -36,6 +36,11 @@
       border-radius: var(--radius-main);
       width: 100%;
       transition: backdrop-filter 0.4s linear;
+
+      @include media(mobile-m) {
+        object-position: center;
+        aspect-ratio: 13 / 9;
+      }
     }
 
     &:hover {
@@ -73,6 +78,11 @@
 
     p {
       font-weight: var(--fw-400);
+    }
+
+    @include media(tablet-wide) {
+      padding: 10px;
+      font-size: 14px;
     }
   }
 }

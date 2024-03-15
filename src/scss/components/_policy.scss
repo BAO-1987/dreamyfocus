@@ -4,7 +4,7 @@
 .policy {
   &__content {
     border-radius: var(--radius-big);
-    padding: clamp(16px, vw(24), 24px);
+    padding: 24px;
 
     &:not(:last-child) {
       margin-bottom: 16px;
@@ -44,6 +44,6 @@
 
   a {
     text-decoration: underline;
-    color: var(--color-blue-400);
+    color: var(--color-blue-800);
   }
 }

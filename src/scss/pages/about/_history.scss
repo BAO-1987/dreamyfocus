@@ -23,6 +23,11 @@
 
     img {
       height: 100%;
+
+      @include media(mobile-m) {
+        object-position: center;
+        aspect-ratio: 13 / 9;
+      }
     }
   }
 
@@ -45,6 +50,10 @@
 
     @include media(tablet) {
       max-width: 100%;
+
+      br {
+        display: none;
+      }
     }
   }
 }
