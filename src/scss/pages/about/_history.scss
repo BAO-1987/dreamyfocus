@@ -6,6 +6,24 @@
     display: grid;
     grid-template-columns: repeat(2, auto);
     gap: 2.4rem;
+
+    @include media(desktop) {
+      gap: 24px;
+    }
+
+    @include media(tablet) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__image {
+    justify-self: center;
+    overflow: hidden;
+    border-radius: var(--radius-main);
+
+    img {
+      height: 100%;
+    }
   }
 
   &__descr {
@@ -23,6 +41,10 @@
       margin-bottom: 15px;
       font-size: clamp(16px, 0.8571rem + 0.7143vi, 24px);
       line-height: 1.5;
+    }
+
+    @include media(tablet) {
+      max-width: 100%;
     }
   }
 }

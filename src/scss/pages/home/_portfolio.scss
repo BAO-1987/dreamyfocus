@@ -3,8 +3,7 @@
 
 .portfolio {
   &__masonry {
-    max-width: 1320px;
-    columns: 408px;
+    columns: 3;
     margin-bottom: 2.4rem;
     gap: 2.4rem;
 
@@ -12,11 +11,23 @@
       break-inside: avoid;
       margin-bottom: 24px;
     }
+
+    @include media(tablet) {
+      gap: 16px;
+    }
+
+    @include media(mobile-l) {
+      columns: 1;
+    }
   }
 
   &__list {
     columns: 2;
     gap: 16px;
+
+    @include media(mobile-l) {
+      columns: 4;
+    }
   }
 
   &__item {
@@ -25,16 +36,25 @@
     h3 {
       font-size: 20px;
       text-align: center;
+
+      @include media(tablet) {
+        font-size: 16px;
+      }
     }
   }
 
   .btn {
     margin-inline: auto;
-    max-width: 190px;
   }
 
   h2 {
     margin-bottom: 2.4rem;
     text-align: center;
+  }
+
+  @include media(tablet) {
+    br {
+      display: none;
+    }
   }
 }

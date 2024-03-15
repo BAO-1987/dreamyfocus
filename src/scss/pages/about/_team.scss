@@ -7,7 +7,7 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 24px;
 
-    @include media(tablet) {
+    @include media(mobile-l) {
       grid-template-columns: repeat(2, 1fr);
     }
 

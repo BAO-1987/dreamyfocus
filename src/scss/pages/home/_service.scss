@@ -16,9 +16,21 @@
     display: grid;
     grid-template-columns: repeat(2, auto);
     gap: 2.4rem;
+
+    @include media(desktop) {
+      gap: 24px;
+    }
+
+    @include media(tablet-wide) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__item {
+    border: 1px solid var(--color-dark-900);
+    border-radius: 8px;
+    height: max-content;
+
     img {
       border-radius: 8px;
     }
@@ -28,36 +40,79 @@
       max-width: 566px;
 
       .service__descr {
+        margin-bottom: 1.8rem;
         padding: 24px 38px 0;
-        margin-bottom: 36px;
+
+        @include media(mobile-l) {
+          padding: 16px;
+        }
       }
 
       img {
         border-radius: 0 0 8px 8px;
       }
+
+      @include media(desktop) {
+        align-self: center;
+      }
+
+      @include media(tablet-wide) {
+        grid-row: auto;
+        max-width: 100%;
+
+        img {
+          width: 100%;
+        }
+      }
     }
 
     &:not(:first-child) {
       display: flex;
+      gap: 10px;
+
+      @include media(mobile-l) {
+        flex-direction: column;
+
+        img {
+          width: 100%;
+        }
+      }
     }
 
     &:last-child {
-
       img {
         border-radius: 8px 0 0 8px;
       }
 
       .service__descr {
-        padding: 34px;
+        padding: 1.7rem;
+
+        @include media(mobile-l) {
+          padding: 16px;
+        }
+      }
+
+      @include media(mobile-l) {
+        flex-direction: column-reverse;
       }
     }
   }
 
   &__descr {
-    padding: 22px 0px 22px 36px;
+    padding: 22px 0 22px 36px;
+
+    @include media(mobile-l) {
+      padding: 16px;
+    }
   }
 
   .btn {
     max-width: 190px;
+  }
+
+  @include media(tablet-wide) {
+    br {
+      display: none;
+    }
   }
 }

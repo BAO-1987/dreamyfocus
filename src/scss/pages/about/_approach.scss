@@ -21,9 +21,14 @@
       position: absolute;
       right: 0;
       bottom: 27px;
-      font-size: clamp(32px, 1.5rem + 1.6667vi, 48px);
+      font-size: clamp(20px, 1.5rem + 1.6667vi, 48px);
       line-height: 0.58;
       color: var(--color-blue-800);
+
+      @include media(tablet) {
+        position: relative;
+        bottom: 0;
+      }
     }
 
     h3 {

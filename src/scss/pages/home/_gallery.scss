@@ -6,4 +6,8 @@
   background-position: top;
   background-size: contain;
   background-repeat: no-repeat;
+
+  @include media(tablet-wide) {
+    min-height: 400px;
+  }
 }

@@ -3,12 +3,12 @@
 
 .footer {
   &__inner {
-    padding: 43px 0;
+    padding: 2.15rem 0;
   }
 
   &__top {
     position: relative;
-    padding-bottom: 38px;
+    padding-bottom: 1.9rem;
 
     &::before {
       content: "";
@@ -29,6 +29,7 @@
 
     @include media(mobile-m) {
       flex-direction: column;
+      gap: 16px;
     }
   }
 
@@ -39,7 +40,11 @@
 
   &__item {
     &:not(:last-child) {
-      margin-right: 49px;
+      margin-right: 2.45rem;
+
+      @include media(mobile-l) {
+        margin-right: 16px;
+      }
 
       @include media(mobile-m) {
         margin: 0 0 16px;

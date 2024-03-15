@@ -13,13 +13,13 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
 
-    @include media(mobile-l) {
-      grid-template-columns: repeat(2, 1fr);
-    }
+    // @include media(mobile-l) {
+    //   grid-template-columns: repeat(2, 1fr);
+    // }
 
-    @include media(mobile-m) {
-      grid-template-columns: 1fr;
-    }
+    // @include media(mobile-m) {
+    //   grid-template-columns: 1fr;
+    // }
   }
 
   &__item {

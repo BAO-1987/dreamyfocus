@@ -3,16 +3,16 @@
 
 .booking {
   &__list {
-    display: grid;
     counter-reset: advantages-counter;
+    display: grid;
     gap: 2.4rem;
   }
 
   &__item {
     counter-increment: booking-counter;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
     align-items: center;
+    grid-template-columns: repeat(2, 1fr);
     gap: 2.4rem;
 
     img {
@@ -26,17 +26,17 @@
       position: relative;
       left: 0;
       display: block;
+      margin-bottom: 25px;
       font-weight: 300;
       font-size: clamp(32px, 1.5rem + 1.6667vi, 48px);
       line-height: 1.27;
       color: var(--color-blue-800);
-      margin-bottom: 25px;
     }
 
     h3 {
+      margin-bottom: 24px;
       font-size: 24px;
       line-height: 1;
-      margin-bottom: 24px;
     }
 
     p {

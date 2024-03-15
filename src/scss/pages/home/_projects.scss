@@ -7,15 +7,26 @@
     display: grid;
     grid-template-columns: repeat(2, auto);
     gap: 2.85rem;
+
+    @include media(tablet) {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
   }
 
   &__content {
-    transform: translateY(35px);
     width: 100%;
     max-width: 442px;
+    transform: translateY(35px);
 
     .sub-text {
+      margin-bottom: 24px;
       font-weight: var(--fw-300);
+    }
+
+    @include media(tablet) {
+      max-width: 100%;
+      transform: none;
     }
   }
 }

@@ -11,6 +11,20 @@
     img {
       overflow: hidden;
       border-radius: var(--br-main);
+      height: 100%;
+
+      @include media(mobile-l) {
+        margin-inline: auto;
+      }
+    }
+
+    @include media(tablet) {
+      gap: 24px;
+    }
+
+    @include media(mobile-l) {
+      justify-content: center;
+      grid-template-columns: 1fr;
     }
   }
 
@@ -18,5 +32,9 @@
     width: 100%;
     max-width: 688px;
     line-height: 1.5;
+
+    @include media(mobile-l) {
+      max-width: 100%;
+    }
   }
 }

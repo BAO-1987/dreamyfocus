@@ -20,6 +20,7 @@ body {
   color: var(--color-black);
   background-color: var(--color-pink-100);
   font-optical-sizing: auto;
+  scroll-padding: var(--header-height);
 
   &__body {
     min-width: 320px;
@@ -37,6 +38,10 @@ body {
 
 .section {
   padding: 4.3rem 0;
+
+  @include media(tablet) {
+    padding: 2rem 0;
+  }
 }
 
 .container,
@@ -48,7 +53,7 @@ body {
 }
 
 .wrapper {
-  max-width: 1042px;
+  max-width: 832px;
 }
 
 .site-container {
@@ -67,40 +72,19 @@ body {
 }
 
 .logo {
-  margin-right: rem(89);
+  margin-right: 5.56rem;
   width: 100%;
   max-width: 260px;
 
+  img {
+    width: 100%;
+  }
+
   &--footer {
-    margin-right: 0;
+    margin-right: 0 !important;
   }
 
-  @include media(mobile-m) {
-    max-width: 200px;
-  }
-}
-
-.is-scrolling {
-  overflow-y: scroll;
-  padding-bottom: 20px;
-  scroll-snap-align: start;
-  scrollbar-color: var(--color-orange-600) var(--color-white);
-  scrollbar-width: thin;
-
-  &::-webkit-scrollbar {
-    width: 4px;
-    height: 4px;
-  }
-
-  &::-webkit-scrollbar-track {
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    background-color: var(--color-silver-white);
-  }
-
-  &::-webkit-scrollbar-thumb {
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    background-color: var(--color-orange-600);
+  @include media(tablet-wide) {
+    margin-right: 15px;
   }
 }
