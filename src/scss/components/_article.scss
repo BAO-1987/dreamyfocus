@@ -40,6 +40,7 @@
   }
 
   h1 {
+    padding: 0 16px;
     margin: 0 auto 1.8rem;
     text-align: center;
     text-transform: capitalize;
@@ -52,6 +53,8 @@
   }
 
   p {
+    margin-bottom: 36px;
+
     &:last-of-type {
       margin-bottom: 0;
     }
@@ -59,6 +62,17 @@
 
   h2 {
     font-size: clamp(18px, 1rem + 0.5556vi, 24px);
+    line-height: 1.67;
+  }
+
+  ul {
+    margin-bottom: 36px;
+    padding-left: 15px;
+  }
+
+  li {
+    list-style-type: disc;
+    letter-spacing: 0.02em;
   }
 
   @include media(mobile-l) {

@@ -72,12 +72,15 @@ body {
   width: 100%;
   max-width: 260px;
 
-
   &--footer {
     margin-right: 0 !important;
   }
 
   @include media(tablet-wide) {
     margin-right: 15px;
+  }
+
+  @include media(mobile-m) {
+    max-width: 200px;
   }
 }

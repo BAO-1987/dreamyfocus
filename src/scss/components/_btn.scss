@@ -55,4 +55,56 @@
   &--big {
     max-width: 190px;
   }
+
+    &--slider {
+    position: relative;
+    z-index: 2;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    border-color: transparent;
+    background-color: transparent;
+    color: var(--color-white);
+    height: 32px;
+    max-width: 32px;
+
+
+    &::before {
+      @include mask;
+      width: 32px;
+      height: 32px;
+      mask-image: url("../images/icons/arrow.svg");
+      mask-position: 0 0;
+      background-color: var(--color-dark-900);
+    }
+
+    &:hover,
+    &:focus {
+      border-color: transparent;
+      &::before {
+        background-color: var(--color-blue-800);
+      }
+    }
+  }
 }
+
+
+  // .btn {
+  //   &.swiper-button-disabled {
+  //     background-color: var(--color-gray-600);
+  //     pointer-events: none;
+  //   }
+
+  //   &--prev {
+  //     left: 8px;
+  //     scale: -1 1;
+  //   }
+
+  //   &--next {
+  //     right: 8px;
+  //   }
+
+  //   @include media(mobile-m) {
+  //     display: none;
+  //   }
+  // }

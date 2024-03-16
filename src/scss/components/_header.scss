@@ -8,7 +8,7 @@
   padding: 20px 0;
   width: 100%;
   background-color: var(--color-pink-100);
-  transition-property: transform;
+  transition-property: transform, box-shadow;
   transition-duration: 0.15s;
 
   &__inner {
@@ -19,7 +19,11 @@
   }
 
   &.hide {
-    transform: translateY(-100%);
+    transform: translateY(-200%);
+  }
+
+  &.scroll {
+    box-shadow: 0 0 16px 0 var(--color-blue-800);
   }
 
   @include media(tablet) {

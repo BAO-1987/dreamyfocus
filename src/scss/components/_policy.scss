@@ -3,9 +3,6 @@
 
 .policy {
   &__content {
-    border-radius: var(--radius-big);
-    padding: 24px;
-
     &:not(:last-child) {
       margin-bottom: 16px;
     }
@@ -13,7 +10,7 @@
 
   h1 {
     margin-bottom: 2.4rem;
-    font-size: clamp(26px, 1.225rem + 2vi, 58px);
+    font-size: clamp(26px, 1.225rem + 2vi, 48px);
   }
 
   h2 {

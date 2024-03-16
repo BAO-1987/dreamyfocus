@@ -2,10 +2,6 @@
 @use "../utils/mixins" as *;
 
 .news {
-  &--main {
-    padding-top: 2.4rem;
-  }
-
   &__list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -22,7 +18,7 @@
     }
   }
 
-  &__item {
+  &__cards {
     position: relative;
 
     img {
@@ -30,6 +26,10 @@
       margin-bottom: 18px;
       border-radius: var(--radius-main);
       width: 100%;
+
+      @include media(mobile-m) {
+        aspect-ratio: 16 / 9;
+      }
     }
 
     h3 {
@@ -55,6 +55,10 @@
         color: var(--color-blue-800);
       }
     }
+  }
+
+  &--main {
+    padding-top: 2.4rem;
   }
 
   .btn {

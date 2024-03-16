@@ -9,11 +9,8 @@ const swiperProduct = new Swiper('.reviews__slider', {
   draggable: true,
   grabCursor: true,
   navigation: {
-    nextEl: '.slider-swiper .btn--next',
-    prevEl: '.slider-swiper .btn--prev',
+    nextEl: '.reviews__slider .btn--next',
+    prevEl: '.reviews__slider .btn--prev',
   },
 
-  pagination: {
-    el: '.swiper-pagination',
-  },
 });

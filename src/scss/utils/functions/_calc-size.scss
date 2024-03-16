@@ -12,8 +12,3 @@ $myVW: 14.4;
 @function em($pixels, $context: $browser-context) {
   @return calc($pixels / $context) * 1em;
 }
-
-
-// @function vw($pixels, $context: $myVW) {
-//   @return #{calc(round($pixels / $context))}vw;
-// }

@@ -40,6 +40,19 @@
       border-radius: 8px;
     }
 
+    &:not(:first-child) {
+      display: flex;
+      gap: 10px;
+
+      @include media(mobile-l) {
+        flex-direction: column;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+
     &:first-child {
       grid-row: 2 span;
       max-width: 566px;
@@ -64,19 +77,6 @@
       @include media(tablet-wide) {
         grid-row: auto;
         max-width: 100%;
-
-        img {
-          width: 100%;
-        }
-      }
-    }
-
-    &:not(:first-child) {
-      display: flex;
-      gap: 10px;
-
-      @include media(mobile-l) {
-        flex-direction: column;
 
         img {
           width: 100%;
