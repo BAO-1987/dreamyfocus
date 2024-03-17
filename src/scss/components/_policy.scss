@@ -2,6 +2,8 @@
 @use "../utils/mixins" as *;
 
 .policy {
+  padding: 4.3rem 0;
+
   &__content {
     &:not(:last-child) {
       margin-bottom: 16px;
@@ -23,15 +25,18 @@
     margin-top: 20px;
     margin-bottom: 30px;
     padding-left: 15px;
-    font-weight: 600;
   }
 
   li {
-    list-style-type: disc;
+    padding-left: 10px;
     letter-spacing: 0.02em;
 
     &:not(:last-child) {
       margin-bottom: 3px;
+    }
+
+    &::marker {
+      content: "✓";
     }
   }
 
@@ -42,5 +47,9 @@
   a {
     text-decoration: underline;
     color: var(--color-blue-800);
+  }
+
+  @include media(tablet) {
+    padding: 2rem 0;
   }
 }

@@ -3,7 +3,7 @@
 
 .footer {
   &__inner {
-    padding: 2.15rem 0;
+    padding: 1.85rem 0;
   }
 
   &__top {
@@ -41,14 +41,14 @@
 
   &__item {
     &:not(:last-child) {
-      margin-right: 2.45rem;
+      margin-right: 1.6rem;
 
       @include media(mobile-l) {
         margin-right: 16px;
       }
 
       @include media(mobile-m) {
-        margin: 0 0 16px;
+        margin: 0;
       }
     }
   }
@@ -57,7 +57,7 @@
     transition: color 0.3s linear;
 
     &:hover {
-      color: var(--color-blue-400);
+      color: var(--color-blue-800);
     }
   }
 }

@@ -69,7 +69,10 @@
     gap: 3.4rem;
 
     a {
-      font-size: 16px;
+      &:not(.logo) {
+        font-size: 16px;
+        line-height: 1.25;
+      }
     }
 
     @include media(mobile-m) {
@@ -81,6 +84,7 @@
   &--footer {
     #{$root}__list {
       margin-right: 13px;
+      padding-top: 6px;
       display: block;
       columns: 2;
       gap: 3.5rem;
@@ -92,7 +96,7 @@
 
     #{$root}__item {
       &:not(:last-of-type) {
-        margin: 0 0 27px 0;
+        margin: 0 0 26px 0;
       }
     }
 

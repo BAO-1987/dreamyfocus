@@ -11,13 +11,6 @@
   transition-property: transform, box-shadow;
   transition-duration: 0.15s;
 
-  &__inner {
-    z-index: -1;
-    flex-direction: column;
-    margin-right: 0;
-    transition-duration: 0.15s;
-  }
-
   &.hide {
     transform: translateY(-200%);
   }
@@ -27,6 +20,8 @@
   }
 
   @include media(tablet) {
+    padding: 10px 0;
+
     .nav__inner {
       position: fixed;
       left: 0;
@@ -38,7 +33,7 @@
       padding-top: calc(var(--header-height) * 1.5);
       width: 100%;
       height: calc(var(--vh));
-      background-color: var(--color-white);
+      background-color: var(--color-pink-100);
       transform: translateX(150%);
       transition-property: transform;
       transition-duration: 0.4s;

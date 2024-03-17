@@ -4,7 +4,7 @@ import Swiper, {
 
 const swiperProduct = new Swiper('.reviews__slider', {
   slidesPerView: 1,
-  spaceBetween: 20,
+  spaceBetween: 10,
   modules: [Navigation],
   draggable: true,
   grabCursor: true,
